@@ -280,7 +280,8 @@ body {
 .title {
   display: flex;
   align-items: center;
-  gap: var(--spacing-sm);
+  margin-top: var(--spacing-lg);
+  gap: var(--spacing-xl);
 }
 
 .codeImg img {

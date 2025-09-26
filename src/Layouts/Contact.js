@@ -119,23 +119,29 @@ export const Contact = () => {
           </form>
         </section>
 
-        {/* Social Links */}
-        <section className="contact-social">
-          <div className="social-links stagger-animation delay-4">
-            {socialLinks.map((link, index) => (
+        {/* CV Download Section */}
+        <section className="cv-download-section">
+          <div className="cv-download-card stagger-animation delay-5">
+            <h3>📄 Download My CV</h3>
+            <p>Get a copy of my curriculum vitae in your preferred language:</p>
+            <div className="cv-buttons">
               <a
-                key={index}
-                href={link.href}
-                className="social-link"
-                title={link.title}
-                {...(link.external && {
-                  target: "_blank",
-                  rel: "noopener noreferrer",
-                })}
+                href="/CV%20Systems.docx"
+                download="Cristian_Zaccardi_CV_English.docx"
+                className="btn btn-cv btn-english"
+                title="Download CV in English"
               >
-                {link.icon}
+                🇺🇸 English CV
               </a>
-            ))}
+              <a
+                href="/CV%20sistemas.docx"
+                download="Cristian_Zaccardi_CV_Español.docx"
+                className="btn btn-cv btn-spanish"
+                title="Download CV in Spanish"
+              >
+                🇪🇸 CV en Español
+              </a>
+            </div>
           </div>
         </section>
 
@@ -147,6 +153,25 @@ export const Contact = () => {
               I'm always excited to collaborate on new projects, discuss
               innovative ideas, or help bring your vision to life.
             </p>
+            {/* Social Links */}
+            <section className="contact-social">
+              <div className="social-links stagger-animation delay-4">
+                {socialLinks.map((link, index) => (
+                  <a
+                    key={index}
+                    href={link.href}
+                    className="social-link"
+                    title={link.title}
+                    {...(link.external && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                    })}
+                  >
+                    {link.icon}
+                  </a>
+                ))}
+              </div>
+            </section>
           </div>
         </section>
       </main>

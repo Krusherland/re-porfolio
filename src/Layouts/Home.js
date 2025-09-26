@@ -1,6 +1,7 @@
 import React from "react";
 import { Languages } from "./Components/Languages";
 import { PLanguages } from "./Components/PLanguages";
+import { Projects } from "./Components/Projects";
 
 export const Home = () => {
   return (
@@ -31,6 +32,10 @@ export const Home = () => {
       
       <div className="stagger-animation delay-3">
         <PLanguages />
+      </div>
+
+      <div className="stagger-animation delay-4">
+        <Projects />
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
 import React from "react";
-import { Resume } from "./Components/Resume";
+import { Projects as ProjectsComponent } from "./Components/Projects";
 
-export const Home = () => {
+export const Projects = () => {
   return (
     <div className="container">
       <div className="stagger-animation delay-2">
-        <Resume />
+        <ProjectsComponent />
       </div>
     </div>
   );

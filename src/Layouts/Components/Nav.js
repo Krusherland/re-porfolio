@@ -54,6 +54,9 @@ export const Nav = () => {
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
            Home
         </NavLink>
+        <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')}>
+           Projects
+        </NavLink>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
            Contact
         </NavLink>

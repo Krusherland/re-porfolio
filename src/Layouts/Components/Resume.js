@@ -99,14 +99,23 @@ export const Resume = () => {
       <div className="resume-content">
         <section className="resume-section">
           <h2 className="section-title">Professional Profile</h2>
-          <p className="profile-text">
-            Dedicated English teacher with 5+ years of classroom experience,
-            currently completing a Technical Degree in Systems Analysis with
-            specialization in software development and database management.
-            Committed to leveraging technical expertise to solve complex
-            problems and optimize processes through modern technological
-            solutions.
-          </p>
+          <div className="profile-section">
+            <p className="profile-text">
+              Dedicated English teacher with 5+ years of classroom experience,
+              currently completing a Technical Degree in Systems Analysis with
+              specialization in software development and database management.
+              Committed to leveraging technical expertise to solve complex
+              problems and optimize processes through modern technological
+              solutions.
+            </p>
+            <div className="profile-image-container">
+              <img
+                src="/profile.png"
+                alt="Cristian Zaccardi"
+                className="profile-image"
+              />
+            </div>
+          </div>
         </section>
 
         <section className="resume-section">

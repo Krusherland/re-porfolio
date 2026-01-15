@@ -39,26 +39,19 @@ export const Nav = () => {
           alt="Kru Dev Logo" 
           className={getLogoClass()}
         />
-        {isClicked && (
-          <div className="click-effects">
-            <div className="sparkle sparkle-1">✨</div>
-            <div className="sparkle sparkle-2">🚀</div>
-            <div className="sparkle sparkle-3">💫</div>
-            <div className="sparkle sparkle-4">⭐</div>
-            <div className="sparkle sparkle-5">🎉</div>
-            <div className="click-counter">Click #{clickCount}</div>
-          </div>
-        )}
       </div>
       <div className="nav-links">
         <NavLink to="/" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Home
+          Home
         </NavLink>
         <NavLink to="/projects" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Projects
+          Projects
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'active' : '')}>
+          About
         </NavLink>
         <NavLink to="/contact" className={({ isActive }) => (isActive ? 'active' : '')}>
-           Contact
+          Contact
         </NavLink>
       </div>
     </div>

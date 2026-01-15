@@ -53,9 +53,9 @@ export const Home = () => {
             <Link to="/projects" className="btn btn-primary">
               🚀 View My Work
             </Link>
-            <a href="/CV_Cristian_Zaccardi.pdf" download className="btn btn-secondary">
-              📄 Download CV
-            </a>
+            <Link to="/contact" className="btn btn-secondary">
+              📄 Get in Touch
+            </Link>
           </div>
         </div>
         <div className="hero-visual">
@@ -86,7 +86,7 @@ export const Home = () => {
       <section className="featured-section">
         <div className="section-header">
           <h2 className="section-title">Featured Work</h2>
-          <p className="section-subtitle">Projects I've brought to life (usually after a coding marathon)</p>
+          <p className="section-subtitle">Projects I've brought to life</p>
         </div>
         <div className="featured-grid">
           {featuredProjects.map((project, index) => (

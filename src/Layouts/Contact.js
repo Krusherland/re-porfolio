@@ -126,16 +126,16 @@ export const Contact = () => {
             <p>Get a copy of my curriculum vitae in your preferred language:</p>
             <div className="cv-buttons">
               <a
-                href="/CV%20Systems.docx"
-                download="Cristian_Zaccardi_CV_English.docx"
+                href="/Cristian_Zaccardi_Resume(eng).pdf"
+                download="Cristian_Zaccardi_Resume(eng).pdf"
                 className="btn btn-cv btn-english"
                 title="Download CV in English"
               >
                 🇺🇸 English CV
               </a>
               <a
-                href="/CV%20sistemas.docx"
-                download="Cristian_Zaccardi_CV_Español.docx"
+                href="/Cristian_Zaccardi_Resume.pdf"
+                download="Cristian_Zaccardi_Resume.pdf"
                 className="btn btn-cv btn-spanish"
                 title="Download CV in Spanish"
               >

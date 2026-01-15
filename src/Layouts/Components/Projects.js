@@ -77,10 +77,6 @@ export const Projects = () => {
         <h2 className="section-title">
           Featured <span className="gradient-text">Projects</span>
         </h2>
-        <p className="section-subtitle">
-          Real projects, real impact — built with passion and purpose
-        </p>
-
         <div className="projects-hero-grid">
           {projects.map((project, index) => {
             const isExpanded = expandedProject === project.id;

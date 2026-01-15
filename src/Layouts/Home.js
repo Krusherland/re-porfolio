@@ -82,6 +82,22 @@ export const Home = () => {
         </div>
       </section>
 
+      {/* Tech Stack */}
+      <section className="tech-section">
+        <div className="section-header">
+          <h2 className="section-title">Tech Stack</h2>
+          <p className="section-subtitle">Tools I use to bring ideas to life</p>
+        </div>
+        <div className="tech-grid">
+          {techStack.map((tech, index) => (
+            <div key={index} className="tech-item">
+              <span className="tech-name">{tech.name}</span>
+              <span className="tech-category">{tech.category}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Featured Projects */}
       <section className="featured-section">
         <div className="section-header">
@@ -119,22 +135,6 @@ export const Home = () => {
           <Link to="/projects" className="btn btn-outline">
             See All Projects →
           </Link>
-        </div>
-      </section>
-
-      {/* Tech Stack */}
-      <section className="tech-section">
-        <div className="section-header">
-          <h2 className="section-title">Tech Stack</h2>
-          <p className="section-subtitle">Tools I use to bring ideas to life</p>
-        </div>
-        <div className="tech-grid">
-          {techStack.map((tech, index) => (
-            <div key={index} className="tech-item">
-              <span className="tech-name">{tech.name}</span>
-              <span className="tech-category">{tech.category}</span>
-            </div>
-          ))}
         </div>
       </section>
 

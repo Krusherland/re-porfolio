@@ -7,25 +7,25 @@ export const Projects = () => {
   const projects = [
     {
       id: 1,
-      title: "El Reino",
-      tagline: "Where elegance meets functionality",
-      description: "A modern and elegant website showcasing creative design and smooth user experience with beautiful animations and responsive layout.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "CSS3"],
-      liveUrl: "https://el-reino.netlify.app/",
-      image: "el-reino.png", 
-      category: "Full-Stack Web",
+      title: "Somos",
+      tagline: "Empowering personal growth through education",
+      description: "A comprehensive online platform offering curated courses for personal development, self-improvement, and holistic growth.",
+      technologies: ["PHP", "Blade", "MySQL", "CSS3", "JavaScript"],
+      liveUrl: "https://somos.up.railway.app/",
+      image: "Somos.png",
+      category: "Educational Platform",
       status: "Live",
-      challenge: "Create a visually stunning website that loads fast and works seamlessly across all devices while maintaining a premium feel.",
-      solution: "Built with the MERN stack for optimal performance. Implemented lazy loading for images, optimized animations with CSS transforms, and created a mobile-first responsive design.",
-      impact: "Achieved 95+ Lighthouse score, sub-2s load time, and 40% increase in user engagement through smooth interactions.",
+      challenge: "Educational platform for personal growth courses",
+      solution: "PHP backend with Blade templating and MySQL database",
+      impact: "Intuitive course browsing with engaging UI/UX",
       timeline: "3 weeks",
-      role: "Full-Stack Developer",
-      screenshots: ["el-reino.png", "el-reino-2.png", "el-reino-3.png"],
+      role: "Frontend Developer & UX Designer",
+      screenshots: ["Somos.png", "Somos2.png", "Somos3.png"],
       features: [
-        "Smooth scroll animations",
-        "Responsive grid layout",
-        "Fast page transitions",
-        "SEO optimized"
+        "Course catalog browsing",
+        "User-friendly navigation",
+        "Responsive design",
+        "Inspiring visual design"
       ]
     },
     {
@@ -38,17 +38,40 @@ export const Projects = () => {
       image: "sublimaru.png",
       category: "E-Commerce",
       status: "Live",
-      challenge: "Design an e-commerce platform that feels personal and engaging while making the shopping process intuitive and quick.",
-      solution: "Focused on clean UI with large product images, easy navigation, and a streamlined checkout flow. Used modern CSS for smooth interactions without heavy JavaScript.",
-      impact: "Created a conversion-optimized design with clear CTAs, resulting in an intuitive shopping experience that keeps users engaged.",
+      challenge: "E-commerce platform with intuitive shopping experience",
+      solution: "Vanilla JavaScript with modern CSS3 and HTML5",
+      impact: "Clean UI with streamlined checkout flow",
       timeline: "2 weeks",
       role: "Frontend Developer & UI Designer",
-      screenshots: ["sublimaru.png", "sublimaru-2.png", "sublimaru-3.png"],
+      screenshots: ["sublimaru.png", "Sublimaru2.png", "Sublimaru3.png"],
       features: [
         "Product showcase grid",
         "Shopping cart system",
         "Mobile-optimized checkout",
         "Clean minimalist design"
+      ]
+    },
+    {
+      id: 3,
+      title: "El Reino",
+      tagline: "Where elegance meets functionality",
+      description: "A modern and elegant website showcasing creative design and smooth user experience with beautiful animations and responsive layout.",
+      technologies: ["React", "Node.js", "MongoDB", "Express", "CSS3"],
+      liveUrl: "https://el-reino.netlify.app/",
+      image: "el-reino.png", 
+      category: "Full-Stack Web",
+      status: "Live",
+      challenge: "Full-stack web application with modern design",
+      solution: "MERN Stack (MongoDB, Express, React, Node.js) with CSS3 animations",
+      impact: "Responsive design with optimized performance",
+      timeline: "3 weeks",
+      role: "Full-Stack Developer",
+      screenshots: ["el-reino.png", "el-reino-2.png", "el-reino-3.png"],
+      features: [
+        "Smooth scroll animations",
+        "Responsive grid layout",
+        "Fast page transitions",
+        "SEO optimized"
       ]
     }
   ];

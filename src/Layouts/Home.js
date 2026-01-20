@@ -23,11 +23,11 @@ export const Home = () => {
   const featuredProjects = [
     {
       id: 1,
-      title: "El Reino",
-      description: "Modern website with beautiful animations",
-      technologies: ["MERN Stack", "CSS3"],
-      liveUrl: "https://el-reino.netlify.app/",
-      image: "el-reino.png"
+      title: "Somos",
+      description: "Educational platform for personal growth courses",
+      technologies: ["PHP", "Blade", "MySQL"],
+      liveUrl: "https://somos.up.railway.app/",
+      image: "Somos.png"
     },
     {
       id: 2,

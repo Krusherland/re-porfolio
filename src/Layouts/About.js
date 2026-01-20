@@ -123,7 +123,7 @@ export const About = () => {
           </div>
           <div className="about-hero-image">
             <img
-              src="/profile.png"
+              src={`${process.env.PUBLIC_URL}/profile.jpg`}
               alt="Cristian Zaccardi"
               onError={(e) => {
                 e.target.src =

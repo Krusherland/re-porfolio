@@ -25,7 +25,7 @@ export const Home = () => {
       id: 1,
       title: "Somos",
       description: "Educational platform for personal growth courses",
-      technologies: ["PHP", "Blade", "MySQL"],
+      technologies: ["Laravel", "Blade", "MySQL"],
       liveUrl: "https://somos.up.railway.app/",
       image: "Somos.png"
     },

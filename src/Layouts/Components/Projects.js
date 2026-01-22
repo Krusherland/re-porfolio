@@ -1,10 +1,40 @@
+
 import React, { useState } from 'react';
+
 
 export const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [activeScreenshot, setActiveScreenshot] = useState({});
 
   const projects = [
+    {
+      id: 4,
+      title: "Soy",
+      tagline: "AI-powered 3D experience with Django & React",
+      description: "Soy offers a virtual companion through your journey powered by AI. Write about you, your days and routines, and discover parts of you that remain hidden.",
+      technologies: ["Django", "React", "three.js", "OpenAI", "CSS3"],
+      liveUrl: "https://soyapp-production.up.railway.app/",
+      image: 'Soy.png',
+      category: "AI & 3D Web App",
+      status: "Live",
+      challenge: "Integrating real-time 3D graphics and AI into a seamless web experience.",
+      solution: "Django backend with REST API, React frontend, three.js for 3D, and OpenAI for AI-driven features.",
+      impact: "Interactive, visually rich, and intelligent user experience.",
+      timeline: "4 weeks",
+      role: "Full-Stack Developer",
+      screenshots: [
+        'Soy.png',
+        'Soy 2.png',
+        'Soy 3.png'
+      ],
+      features: [
+        "3D visualization with three.js",
+        "AI-powered chat and content",
+        "Modern Django REST API integration",
+        "Responsive and interactive UI",
+        "Live deployment on Railway.app"
+      ]
+    },
     {
       id: 1,
       title: "Somos",

@@ -15,10 +15,10 @@ export const Projects = () => {
       technologies: ["Django", "React", "three.js", "OpenAI", "CSS3"],
       liveUrl: "https://soyapp.up.railway.app/",
       image: 'Soy.png',
-      category: "AI & 3D Web App",
+      category: "AI App",
       status: "Live",
-      challenge: "Integrating real-time 3D graphics and AI into a seamless web experience.",
-      solution: "Django backend with REST API, React frontend, three.js for 3D, and OpenAI for AI-driven features.",
+      challenge: "Integrating AI into a seamless web experience.",
+      solution: "Django backend with REST API, React frontend, and OpenAI for AI-driven features.",
       impact: "Interactive, visually rich, and intelligent user experience.",
       timeline: "4 weeks",
       role: "Full-Stack Developer",
@@ -28,7 +28,6 @@ export const Projects = () => {
         'Soy 3.png'
       ],
       features: [
-        "3D visualization with three.js",
         "AI-powered chat and content",
         "Modern Django REST API integration",
         "Responsive and interactive UI",

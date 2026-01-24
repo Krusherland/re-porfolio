@@ -10,7 +10,7 @@ export const Projects = () => {
     {
       id: 4,
       title: "Soy",
-      tagline: "AI-powered 3D experience with Django & React",
+      tagline: "AI-powered experience with Django & React",
       description: "Soy offers a virtual companion through your journey powered by AI. Write about you, your days and routines, and discover parts of you that remain hidden.",
       technologies: ["Django", "React", "three.js", "OpenAI", "CSS3"],
       liveUrl: "https://soyapp.up.railway.app/",

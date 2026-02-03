@@ -16,8 +16,10 @@ export const Home = () => {
     { name: "MySQL", category: "Database" },
     { name: "Java", category: "Backend" },
     { name: "Python", category: "Backend" },
-    { name: "C#", category: "Backend" },
-    { name: "PHP", category: "Backend" }
+    { name: "PHP", category: "Backend" },
+    { name: "Docker", category: "DevOps" },
+    { name: "AWS", category: "Cloud" },
+    { name: "CI/CD Pipelines", category: "DevOps" }
   ];
 
   const featuredProjects = [

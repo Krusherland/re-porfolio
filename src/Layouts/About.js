@@ -10,6 +10,8 @@ export const About = () => {
       description:
         "Building web applications with React, Node.js, and databases. I dive deep into code marathons until everything clicks!",
       tech: ["React", "Node.js", "MongoDB", "MySQL"],
+      // Added Docker, AWS, and CI/CD pipelines to the tech stack
+      extra: ["Docker", "AWS", "CI/CD Pipelines"],
     },
     {
       icon: "📚",
@@ -156,6 +158,13 @@ export const About = () => {
                     {tech}
                   </span>
                 ))}
+                {/* Add extra tech stack for Full-Stack Development */}
+                {service.extra &&
+                  service.extra.map((extraTech, idx) => (
+                    <span key={`extra-${idx}`} className="tech-pill extra-tech">
+                      {extraTech}
+                    </span>
+                  ))}
               </div>
             </div>
           ))}

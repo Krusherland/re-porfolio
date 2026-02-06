@@ -126,7 +126,7 @@ export const Contact = () => {
             <p>Get a copy of my curriculum vitae in your preferred language:</p>
             <div className="cv-buttons">
               <a
-                href="/Cristian_Zaccardi_Resume(eng).pdf"
+                href="/Cristian-Zaccardi-Resume(Eng).pdf"
                 download="Cristian_Zaccardi_Resume_English.pdf"
                 className="btn btn-cv btn-english"
                 title="Download CV in English"
@@ -136,7 +136,7 @@ export const Contact = () => {
                 🇺🇸 English CV
               </a>
               <a
-                href="/Cristian_Zaccardi_Resume.pdf"
+                href="/Cristian-Zaccardi-Resume.pdf"
                 download="Cristian_Zaccardi_Resume_Spanish.pdf"
                 className="btn btn-cv btn-spanish"
                 title="Download CV in Spanish"

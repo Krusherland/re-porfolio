@@ -127,17 +127,21 @@ export const Contact = () => {
             <div className="cv-buttons">
               <a
                 href="/Cristian_Zaccardi_Resume(eng).pdf"
-                download="Cristian_Zaccardi_Resume(eng).pdf"
+                download="Cristian_Zaccardi_Resume_English.pdf"
                 className="btn btn-cv btn-english"
                 title="Download CV in English"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 🇺🇸 English CV
               </a>
               <a
                 href="/Cristian_Zaccardi_Resume.pdf"
-                download="Cristian_Zaccardi_Resume.pdf"
+                download="Cristian_Zaccardi_Resume_Spanish.pdf"
                 className="btn btn-cv btn-spanish"
                 title="Download CV in Spanish"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 🇪🇸 CV en Español
               </a>

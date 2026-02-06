@@ -1,10 +1,14 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 
 
 export const Projects = () => {
   const [expandedProject, setExpandedProject] = useState(null);
   const [activeScreenshot, setActiveScreenshot] = useState({});
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImage, setLightboxImage] = useState(null);
+  const [lightboxProject, setLightboxProject] = useState(null);
 
   const projects = [
     {
@@ -123,13 +127,55 @@ export const Projects = () => {
     }));
   };
 
+  const openLightbox = (image, project) => {
+    setLightboxImage(image);
+    setLightboxProject(project);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+    setLightboxImage(null);
+    setLightboxProject(null);
+  };
+
+  // Handle body overflow when lightbox opens/closes
+  useEffect(() => {
+    if (lightboxOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+    
+    // Cleanup on unmount
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [lightboxOpen]);
+
+  const navigateLightbox = (direction) => {
+    if (!lightboxProject) return;
+    
+    const screenshots = lightboxProject.screenshots;
+    // Remove leading slash for comparison
+    const currentImage = lightboxImage.replace(/^\//, '');
+    const currentIndex = screenshots.indexOf(currentImage);
+    
+    const newIndex = direction === 'next' 
+      ? (currentIndex + 1) % screenshots.length
+      : (currentIndex - 1 + screenshots.length) % screenshots.length;
+    
+    setLightboxImage(`/${screenshots[newIndex]}`);
+  };
+
   return (
-    <section className="projects-section-hero fade-in">
-      <div className="projects-container">
-        <h2 className="section-title">
-          Featured <span className="gradient-text">Projects</span>
-        </h2>
-        <div className="projects-hero-grid">
+    <>
+      <section className="projects-section-hero fade-in">
+        <div className="projects-container">
+          <h2 className="section-title">
+            Featured <span className="gradient-text">Projects</span>
+          </h2>
+          <div className="projects-hero-grid">
           {projects.map((project, index) => {
             const isExpanded = expandedProject === project.id;
             const currentScreenshot = activeScreenshot[project.id] || 0;
@@ -143,8 +189,11 @@ export const Projects = () => {
                 {/* Main Image Section */}
                 <div className="project-hero-image">
                   <img 
-                    src={project.screenshots[currentScreenshot] || project.image} 
+                    src={`/${project.screenshots[currentScreenshot] || project.image}`} 
                     alt={`${project.title} preview`}
+                    onClick={() => openLightbox(`/${project.screenshots[currentScreenshot] || project.image}`, project)}
+                    style={{ cursor: 'pointer' }}
+                    title="Click to enlarge"
                     onError={(e) => {
                       e.target.src = `https://via.placeholder.com/800x500/00d4ff/0a192f?text=${project.title}`;
                     }}
@@ -288,5 +337,49 @@ export const Projects = () => {
         </div>
       </div>
     </section>
+
+      {/* Lightbox Modal - Rendered via Portal to document.body */}
+      {lightboxOpen && ReactDOM.createPortal(
+        <div className="lightbox-overlay" onClick={closeLightbox}>
+          <div className="lightbox-content" onClick={(e) => e.stopPropagation()}>
+            <button className="lightbox-close" onClick={closeLightbox} aria-label="Close lightbox">
+              ✕
+            </button>
+            
+            <button 
+              className="lightbox-nav lightbox-prev" 
+              onClick={() => navigateLightbox('prev')}
+              aria-label="Previous image"
+            >
+              ‹
+            </button>
+
+            <img 
+              src={lightboxImage} 
+              alt="Enlarged view"
+              className="lightbox-image"
+              onError={(e) => {
+                e.target.src = 'https://via.placeholder.com/1200x800/00d4ff/0a192f?text=Image+Not+Found';
+              }}
+            />
+
+            <button 
+              className="lightbox-nav lightbox-next" 
+              onClick={() => navigateLightbox('next')}
+              aria-label="Next image"
+            >
+              ›
+            </button>
+
+            {lightboxProject && (
+              <div className="lightbox-caption">
+                {lightboxProject.title} - {lightboxProject.screenshots.indexOf(lightboxImage.replace(/^\//, '')) + 1} / {lightboxProject.screenshots.length}
+              </div>
+            )}
+          </div>
+        </div>,
+        document.body
+      )}
+    </>
   );
 };

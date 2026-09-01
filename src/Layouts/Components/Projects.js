@@ -12,6 +12,35 @@ export const Projects = () => {
 
   const projects = [
     {
+      id: 5,
+      title: "Kingdom",
+      tagline: "Real-time hidden identity & drawing game",
+      description: "Kingdom is a multiplayer social deduction game where players take on secret roles — Alchemist, Royal Guard, Outsider, and more — and must draw, deceive, and deduce to win the realm.",
+      technologies: ["React", "Vite", "Socket.io", "Node.js", "CSS3"],
+      liveUrl: "https://kingdomgame.online/",
+      image: "Kingdom-logo.png",
+      category: "Multiplayer Game",
+      status: "Live",
+      challenge: "Building real-time synchronized gameplay with role secrecy and drawing mechanics.",
+      solution: "React + Vite frontend with Socket.io for real-time communication and role-based game logic.",
+      impact: "6–8 players per session with fluid real-time interactions and immersive medieval theme.",
+      timeline: "4 weeks",
+      role: "Full-Stack Developer & Game Designer",
+      screenshots: [
+        "Kingdom-logo.png",
+        "Alchemist.png",
+        "Royal-Guard.png",
+        "Plebeian.png",
+        "Outsider.png"
+      ],
+      features: [
+        "Real-time multiplayer with Socket.io",
+        "Secret role assignment per round",
+        "In-game drawing mechanic",
+        "Statistics and session tracking"
+      ]
+    },
+    {
       id: 4,
       title: "Soy",
       tagline: "AI-powered experience with Django & React",

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+﻿import React, { useState } from "react";
 
 export const Contact = () => {
   const [formData, setFormData] = useState({
@@ -24,18 +24,18 @@ export const Contact = () => {
     {
       href: "mailto:zaccardicristian@gmail.com",
       title: "Email me",
-      icon: "📧",
+      icon: "ðŸ“§",
     },
     {
       href: "https://www.linkedin.com/in/cristian-zaccardi-5035b1267/",
       title: "LinkedIn",
-      icon: "💼",
+      icon: "ðŸ’¼",
       external: true,
     },
     {
       href: "https://github.com/Krusherland",
       title: "GitHub",
-      icon: "💻",
+      icon: "ðŸ’»",
       external: true,
     },
   ];
@@ -122,28 +122,28 @@ export const Contact = () => {
         {/* CV Download Section */}
         <section className="cv-download-section">
           <div className="cv-download-card stagger-animation delay-5">
-            <h3>📄 Download My CV</h3>
+            <h3>ðŸ“„ Download My CV</h3>
             <p>Get a copy of my curriculum vitae in your preferred language:</p>
             <div className="cv-buttons">
               <a
-                href="/Cristian-Zaccardi-Resume(Eng).pdf"
-                download="Cristian_Zaccardi_Resume_English.pdf"
+                href="/CristianZaccardi_CV.docx"
+                download="CristianZaccardi_CV.docx"
                 className="btn btn-cv btn-english"
                 title="Download CV in English"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🇺🇸 English CV
+                ðŸ‡ºðŸ‡¸ English CV
               </a>
               <a
-                href="/Cristian-Zaccardi-Resume.pdf"
-                download="Cristian_Zaccardi_Resume_Spanish.pdf"
+                href="/CristianZaccardi_CV_ES.docx"
+                download="CristianZaccardi_CV_ES.docx"
                 className="btn btn-cv btn-spanish"
                 title="Download CV in Spanish"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                🇪🇸 CV en Español
+                ðŸ‡ªðŸ‡¸ CV en EspaÃ±ol
               </a>
             </div>
           </div>

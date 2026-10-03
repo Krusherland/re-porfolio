@@ -68,6 +68,29 @@ export const Projects = () => {
       ]
     },
     {
+      id: 3,
+      title: "La Diabla",
+      tagline: "Argentine pizzeria with fire and attitude",
+      description: "A digital storefront for an Argentine pizzeria, with a menu, cart, customer sign-in, branch information, and order tracking.",
+      technologies: ["Restaurant Platform", "Online Ordering", "E-Commerce", "Responsive Design"],
+      liveUrl: "https://la-diabla-app-production.up.railway.app/",
+      image: "la-diabla.png",
+      category: "Restaurant Web App",
+      status: "Live",
+      challenge: "Bringing the pizzeria's menu and customer ordering experience online.",
+      solution: "A branded storefront connecting menu discovery with cart, account, locations, and order-tracking flows.",
+      impact: "Customers can explore the menu and access ordering and restaurant information in one place.",
+      timeline: "Live",
+      role: "Web Application Developer",
+      screenshots: ["la-diabla.png"],
+      features: [
+        "Food and drink menu browsing",
+        "Shopping cart and customer sign-in",
+        "Restaurant locations and contact information",
+        "Order tracking"
+      ]
+    },
+    {
       id: 1,
       title: "Somos",
       tagline: "Empowering personal growth through education",
@@ -113,29 +136,6 @@ export const Projects = () => {
         "Clean minimalist design"
       ]
     },
-    {
-      id: 3,
-      title: "La Diabla",
-      tagline: "Argentine pizzeria with fire and attitude",
-      description: "A digital storefront for an Argentine pizzeria, with a menu, cart, customer sign-in, branch information, and order tracking.",
-      technologies: ["Restaurant Platform", "Online Ordering", "E-Commerce", "Responsive Design"],
-      liveUrl: "https://la-diabla-app-production.up.railway.app/",
-      image: "la-diabla.png",
-      category: "Restaurant Web App",
-      status: "Live",
-      challenge: "Bringing the pizzeria's menu and customer ordering experience online.",
-      solution: "A branded storefront connecting menu discovery with cart, account, locations, and order-tracking flows.",
-      impact: "Customers can explore the menu and access ordering and restaurant information in one place.",
-      timeline: "Live",
-      role: "Web Application Developer",
-      screenshots: ["la-diabla.png"],
-      features: [
-        "Food and drink menu browsing",
-        "Shopping cart and customer sign-in",
-        "Restaurant locations and contact information",
-        "Order tracking"
-      ]
-    }
   ];
 
   const toggleProject = (projectId) => {

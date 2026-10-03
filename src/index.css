@@ -3432,7 +3432,7 @@ td:hover {
 
 .projects-section-hero {
   padding: var(--spacing-xxl) 0;
-  max-width: 1400px;
+  max-width: 1240px;
   margin: 0 auto;
 }
 
@@ -3494,7 +3494,7 @@ td:hover {
   position: relative;
   border-radius: var(--border-radius-md);
   overflow: hidden;
-  height: 220px;
+  height: 200px;
 }
 
 .project-hero-image img {

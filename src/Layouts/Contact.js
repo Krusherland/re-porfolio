@@ -24,18 +24,18 @@ export const Contact = () => {
     {
       href: "mailto:zaccardicristian@gmail.com",
       title: "Email me",
-      icon: "ðŸ“§",
+      icon: "📧",
     },
     {
       href: "https://www.linkedin.com/in/cristian-zaccardi-5035b1267/",
       title: "LinkedIn",
-      icon: "ðŸ’¼",
+      icon: "💼",
       external: true,
     },
     {
       href: "https://github.com/Krusherland",
       title: "GitHub",
-      icon: "ðŸ’»",
+      icon: "💻",
       external: true,
     },
   ];
@@ -122,7 +122,7 @@ export const Contact = () => {
         {/* CV Download Section */}
         <section className="cv-download-section">
           <div className="cv-download-card stagger-animation delay-5">
-            <h3>ðŸ“„ Download My CV</h3>
+            <h3>📄 Download My CV</h3>
             <p>Get a copy of my curriculum vitae in your preferred language:</p>
             <div className="cv-buttons">
               <a
@@ -133,7 +133,7 @@ export const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ðŸ‡ºðŸ‡¸ English CV
+                🇺🇸 English CV
               </a>
               <a
                 href="/CristianZaccardi_CV_ES.docx"
@@ -143,7 +143,7 @@ export const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                ðŸ‡ªðŸ‡¸ CV en EspaÃ±ol
+                🇪🇸 CV en Español
               </a>
             </div>
           </div>

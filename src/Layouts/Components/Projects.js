@@ -115,25 +115,25 @@ export const Projects = () => {
     },
     {
       id: 3,
-      title: "El Reino",
-      tagline: "Where elegance meets functionality",
-      description: "A modern and elegant website showcasing creative design and smooth user experience with beautiful animations and responsive layout.",
-      technologies: ["React", "Node.js", "MongoDB", "Express", "CSS3"],
-      liveUrl: "https://el-reino.netlify.app/",
-      image: "el-reino.png", 
-      category: "Full-Stack Web",
+      title: "La Diabla",
+      tagline: "Argentine pizzeria with fire and attitude",
+      description: "A digital storefront for an Argentine pizzeria, with a menu, cart, customer sign-in, branch information, and order tracking.",
+      technologies: ["Restaurant Platform", "Online Ordering", "E-Commerce", "Responsive Design"],
+      liveUrl: "https://la-diabla-app-production.up.railway.app/",
+      image: "la-diabla.png",
+      category: "Restaurant Web App",
       status: "Live",
-      challenge: "Full-stack web application with modern design",
-      solution: "MERN Stack (MongoDB, Express, React, Node.js) with CSS3 animations",
-      impact: "Responsive design with optimized performance",
-      timeline: "3 weeks",
-      role: "Full-Stack Developer",
-      screenshots: ["el-reino.png", "el-reino-2.png", "el-reino-3.png"],
+      challenge: "Bringing the pizzeria's menu and customer ordering experience online.",
+      solution: "A branded storefront connecting menu discovery with cart, account, locations, and order-tracking flows.",
+      impact: "Customers can explore the menu and access ordering and restaurant information in one place.",
+      timeline: "Live",
+      role: "Web Application Developer",
+      screenshots: ["la-diabla.png"],
       features: [
-        "Smooth scroll animations",
-        "Responsive grid layout",
-        "Fast page transitions",
-        "SEO optimized"
+        "Food and drink menu browsing",
+        "Shopping cart and customer sign-in",
+        "Restaurant locations and contact information",
+        "Order tracking"
       ]
     }
   ];
@@ -227,31 +227,33 @@ export const Projects = () => {
                       e.target.src = `https://via.placeholder.com/800x500/00d4ff/0a192f?text=${project.title}`;
                     }}
                   />
-                  <div className="image-navigation">
-                    <button 
-                      className="nav-arrow prev" 
-                      onClick={() => prevScreenshot(project.id, project.screenshots.length)}
-                      aria-label="Previous screenshot"
-                    >
-                      ‹
-                    </button>
-                    <div className="screenshot-dots">
-                      {project.screenshots.map((_, idx) => (
-                        <span 
-                          key={idx} 
-                          className={`dot ${currentScreenshot === idx ? 'active' : ''}`}
-                          onClick={() => setActiveScreenshot(prev => ({ ...prev, [project.id]: idx }))}
-                        />
-                      ))}
+                  {project.screenshots.length > 1 && (
+                    <div className="image-navigation">
+                      <button 
+                        className="nav-arrow prev" 
+                        onClick={() => prevScreenshot(project.id, project.screenshots.length)}
+                        aria-label="Previous screenshot"
+                      >
+                        ‹
+                      </button>
+                      <div className="screenshot-dots">
+                        {project.screenshots.map((_, idx) => (
+                          <span 
+                            key={idx} 
+                            className={`dot ${currentScreenshot === idx ? 'active' : ''}`}
+                            onClick={() => setActiveScreenshot(prev => ({ ...prev, [project.id]: idx }))}
+                          />
+                        ))}
+                      </div>
+                      <button 
+                        className="nav-arrow next" 
+                        onClick={() => nextScreenshot(project.id, project.screenshots.length)}
+                        aria-label="Next screenshot"
+                      >
+                        ›
+                      </button>
                     </div>
-                    <button 
-                      className="nav-arrow next" 
-                      onClick={() => nextScreenshot(project.id, project.screenshots.length)}
-                      aria-label="Next screenshot"
-                    >
-                      ›
-                    </button>
-                  </div>
+                  )}
                   <div className="project-hero-overlay">
                     <span className={`status-badge ${project.status.toLowerCase()}`}>
                       ● {project.status}
@@ -375,13 +377,15 @@ export const Projects = () => {
               ✕
             </button>
             
-            <button 
-              className="lightbox-nav lightbox-prev" 
-              onClick={() => navigateLightbox('prev')}
-              aria-label="Previous image"
-            >
-              ‹
-            </button>
+            {lightboxProject?.screenshots.length > 1 && (
+              <button 
+                className="lightbox-nav lightbox-prev" 
+                onClick={() => navigateLightbox('prev')}
+                aria-label="Previous image"
+              >
+                ‹
+              </button>
+            )}
 
             <img 
               src={lightboxImage} 
@@ -392,13 +396,15 @@ export const Projects = () => {
               }}
             />
 
-            <button 
-              className="lightbox-nav lightbox-next" 
-              onClick={() => navigateLightbox('next')}
-              aria-label="Next image"
-            >
-              ›
-            </button>
+            {lightboxProject?.screenshots.length > 1 && (
+              <button 
+                className="lightbox-nav lightbox-next" 
+                onClick={() => navigateLightbox('next')}
+                aria-label="Next image"
+              >
+                ›
+              </button>
+            )}
 
             {lightboxProject && (
               <div className="lightbox-caption">
